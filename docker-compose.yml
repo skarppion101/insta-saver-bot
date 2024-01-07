@@ -11,6 +11,8 @@ services:
       - .:/app
     ports:
       - 6060:6060
+    environment:
+      TELEGRAM_TOKEN: "TOKEN"
     command: >
       bash -c "cp -rfu /cache/node_modules/. /app/node_modules/  
       && npm start"
